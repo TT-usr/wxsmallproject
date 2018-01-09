@@ -1,0 +1,19 @@
+<view class='content'>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" style='width:100%' />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <import src='../../templates/list'/>
+  <!-- 使用模版  -->
+  <template is="movies" data="{{movies}}" />
+</view>
+
+<view class='baby-view'>
+  <loading hidden="{{hidden}}" bingchange="loadingChange">
+    加载中...
+  </loading>
+</view>

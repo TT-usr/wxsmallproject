@@ -1,0 +1,2 @@
+/* 导入公共的 css 样式表  */
+@import "../../css/list.wxss";

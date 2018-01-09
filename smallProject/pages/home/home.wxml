@@ -1,0 +1,20 @@
+<view class='content'>
+  <view class='today'>
+    <view class='info'>
+      <view class='temp'>{{today.wendu}}℃</view>
+      <view class='weather'>{{today.todayInfo.type}},{{today.todayInfo.fengxiang}}</view>
+      <view class='notice'>友情提示:{{today.ganmao}}</view>
+      <view class='city'>{{city}}</view>
+    </view>
+  </view>
+
+  <!--引入模版  -->
+  <import src='../../templates/item'/>
+  <view class='future'>
+  <!--遍历数据源  -->
+    <block wx:for="{{future}}">
+    <!--使用模版  -->
+      <template is='future-item' data="{{item}}"/>
+    </block>
+  </view>
+</view>

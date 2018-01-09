@@ -1,0 +1,61 @@
+{
+  "pages": [
+    "pages/movie/movie",
+    "pages/home/home",
+    "pages/cal/cal"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "紫辰",
+    "navigationBarTextStyle": "black",
+    "endablePullDownRefresh": true,
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#389cff",
+    "backgroundColor": "#f0f2f5",
+    "borderStyle": "white",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/movie/movie",
+        "text": "影院热映",
+        "iconPath": "pages/assets/movie/dy.png",
+        "selectedIconPath": "pages/assets/movie/dy-1.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/png/tabbar/1.png",
+        "selectedIconPath": "/png/tabbar/1-hl.png"
+      },
+      {
+        "pagePath": "pages/cal/cal",
+        "text": "计算器",
+        "iconPath": "/png/tabbar/3.png",
+        "selectedIconPath": "/png/tabbar/3-hl.png"
+      },
+      {
+        "pagePath": "pages/movie/movie",
+        "text": "电影推荐",
+        "iconPath": "/png/tabbar/2.png",
+        "selectedIconPath": "/png/tabbar/2-hl.png"
+      },
+      {
+        "pagePath": "pages/movie/movie",
+        "text": "查询电影",
+        "iconPath": "/png/tabbar/2.png",
+        "selectedIconPath": "/png/tabbar/2-hl.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 60000,
+    "downloadFile": 60000,
+    "connectSocket": 60000,
+    "uploadFile": 60000
+  },
+  "debug": true
+}
