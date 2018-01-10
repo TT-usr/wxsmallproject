@@ -1,31 +1,25 @@
-// 使用模块化的工具类,先 require , 然后通过 common.xxx 调用参数
+// 引入组件
 var common = require('../../utils/movie.js')
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imgUrls: [
-      'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg',
-      '/pages/assets/movie/001.jpg'
-    ],
     indicatorDots: true,
     autoplay: true,
     interval: 5000,
     duration: 1000,
     movies: [],
-    hidden : false,
-
+    hidden: false,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.loadMovie();
+    this.loadMovie()
   },
 
   /**
@@ -77,27 +71,23 @@ Page({
 
   },
 
-  detail :function(event){
-
+  detail: function (e) {
+    console.log(e)
+    getApp().detail(e);
   },
 
   loadMovie: function () {
     var page = this;
     wx.request({
-      url: "https://api.douban.com/v2/movie/in_theaters",
+      url: "https://api.douban.com/v2/movie/top250",
       header: {
         'Content-Type': 'json'
       },
       success: function (res) {
         var subjects = res.data.subjects;
         common.processSubjects(subjects)
-        page.setData({ movies: subjects ,hidden: true})
+        page.setData({ movies: subjects, hidden: true })
       }
     })
-  },
-
-  detail: function (e) {
-    console.log(e)
-    getApp().detail(e);
   },
 })

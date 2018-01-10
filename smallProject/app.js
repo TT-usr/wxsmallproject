@@ -46,5 +46,12 @@ App({
     userInfo: null,
     msg : "我是全局消息",
     baseurl : "https://apigo.holoread.news/api/v1"
+  },
+
+  detail: function (e) {
+    //wx.setStorageSync('movieId',e.currentTarget.id );
+    wx.navigateTo({
+      url: '../detail/detail?id=' + e.currentTarget.id
+    })
   }
 })

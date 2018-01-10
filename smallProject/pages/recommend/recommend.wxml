@@ -1,0 +1,18 @@
+<view class='content'>
+  <view class='search'>
+    <input class='input' bindinput='bindKeyInput' />
+    <button bindtap='search' hover-class='btnClick'>
+      查询
+    </button>
+  </view>
+  <view class='inputShow'>你要搜索的: {{inputValue}}</view>
+
+  <import src='../../templates/list' />
+  <template is="movies" data="{{movies}}" />
+</view>
+
+<view class='baby-view'>
+  <loading hidden="{{hidden}}" bingchange="loadingChange">
+    加载中...
+  </loading>
+</view>

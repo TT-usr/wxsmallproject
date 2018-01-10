@@ -1,0 +1,10 @@
+<view class='content'>
+  <import src= '../../templates/list' />
+  <template is="movies" data="{{movies}}"/>
+</view>
+
+<view class='baby-view'>
+  <loading hidden="{{hidden}}" bingchange="loadingChange">
+    加载中...
+  </loading>
+</view>

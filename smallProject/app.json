@@ -2,7 +2,10 @@
   "pages": [
     "pages/movie/movie",
     "pages/home/home",
-    "pages/cal/cal"
+    "pages/cal/cal",
+    "pages/search/search",
+    "pages/recommend/recommend",
+    "pages/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -38,13 +41,13 @@
         "selectedIconPath": "/png/tabbar/3-hl.png"
       },
       {
-        "pagePath": "pages/movie/movie",
+        "pagePath": "pages/search/search",
         "text": "电影推荐",
-        "iconPath": "/png/tabbar/2.png",
-        "selectedIconPath": "/png/tabbar/2-hl.png"
+        "iconPath": "/pages/assets/movie/search.png",
+        "selectedIconPath": "/pages/assets/movie/search-1.png"
       },
       {
-        "pagePath": "pages/movie/movie",
+        "pagePath": "pages/recommend/recommend",
         "text": "查询电影",
         "iconPath": "/png/tabbar/2.png",
         "selectedIconPath": "/png/tabbar/2-hl.png"
